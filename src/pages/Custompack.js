@@ -10,6 +10,7 @@ import Totalslist from "../components/Totalslist";
 function Custompack() {
   const [items, setItems] = useState(Contentlist);
   const [totals, setTotals] = useState(Totalslist);
+  var [initialno, setInitialno] = useState(1);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -34,17 +35,12 @@ function Custompack() {
     setItems(newItems);
     setTotals(newtotal);
   };
+
   const cartClicked = () => {
-    /*const newcart = {
-      contname: packname,
-      total: totals[0]?.total,
-      unit: 0,
-    };*/
-
-    console.log("lel");
+    setInitialno(initialno++);
+    console.log(packname);
   };
-
-  const [packname, setPackname] = useState(`Custom pack 1`);
+  var [packname, setPackname] = useState(`Custom pack ${initialno}`);
 
   return (
     <div className="packages custompack">
@@ -89,10 +85,7 @@ function Custompack() {
                 <span>per pack</span>
               </div>
             </div>
-            <div
-              className="cart-text point noselect"
-              onClick={() => cartClicked}
-            >
+            <div className="cart-text point noselect" onClick={cartClicked}>
               <span>Add to Cart</span>
             </div>
           </div>

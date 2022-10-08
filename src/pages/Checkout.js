@@ -21,11 +21,6 @@ const Checkout = () => {
 
   const Checkoutlist = [...packages, ...drinks, ...Custompacklist];
   const [newlist, setNewlist] = useState(Checkoutlist);
-  /* for (var i = 0; i < newlist?.length - 1; i++) {
-    var newprice = totalprice;
-    newprice += newlist[i].price;
-    setTotalprice(newprice);
-  }*/
   var newprice = newlist?.reduce((prev, next) => prev + next.total, 0);
   var [totalprice, setTotalprice] = useState(newprice);
 
