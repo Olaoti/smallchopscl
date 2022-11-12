@@ -61,7 +61,8 @@ const Checkout = () => {
   };
 
   const removeitem = (pack, index) => {
-    Totalslist[3].total -= pack?.unit;
+Console.log('clickee')
+    /*Totalslist[3].total -= pack?.unit;
     
     if (Packageslist.includes(pack)) {
       const packag = [...newpack];
@@ -76,6 +77,7 @@ const Checkout = () => {
     }
 setTotalprice((totalprice -= (pack?.price*pack?.unit)));
   setNewlist(newlist.filter((lis) => newlist?.indexOf(lis) !== index));
+*/
 };
   return (
     <div className="check">
