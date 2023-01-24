@@ -9,12 +9,13 @@ const Treats = () => {
   });
   const [totals, setTotals] = useState(Totalslist);
   const addToCart = (treat) => {
+    const newTreat = [...Packageslist];
     if (treat.unit === 0) {
-      treat.unit = 1;
+      newTreat[treat.id].unit = 1;
+      newTreat[treat.id].total = newTreat[treat.id].price;
       const newTotal = [...totals];
       newTotal[3].total++;
       setTotals(newTotal);
-      console.log(treat);
     }
   };
   return (

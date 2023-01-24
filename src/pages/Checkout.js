@@ -61,9 +61,8 @@ const Checkout = () => {
   };
 
   const removeitem = (pack, index) => {
-Console.log('clickee')
-    /*Totalslist[3].total -= pack?.unit;
-    
+    Totalslist[3].total -= pack.unit;
+    setNewlist(newlist.filter((lis) => newlist.indexOf(lis) !== index));
     if (Packageslist.includes(pack)) {
       const packag = [...newpack];
       packag[pack.id].unit = 0;
@@ -75,10 +74,7 @@ Console.log('clickee')
       drink[pack.id - 1].total = 0;
       setNewdrink(drink);
     }
-setTotalprice((totalprice -= (pack?.price*pack?.unit)));
-  setNewlist(newlist.filter((lis) => newlist?.indexOf(lis) !== index));
-*/
-};
+  };
   return (
     <div className="check">
       <Navbar />
