@@ -88,7 +88,7 @@ setTotalprice((totalprice -= (pack?.price*pack?.unit)));
           {newlist?.map((pack, index) => {
             return (
               <div className="ordered-section" key={index}>
-                <div className="cancel" onClick={() => removeitem(index, pack)}>
+                <div className="cancel" onClick={() => removeitem(pack, index)}>
                   <span></span>
                   <span></span>
                 </div>
