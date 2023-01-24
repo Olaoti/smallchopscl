@@ -10,6 +10,9 @@ import Custompacklist from "../components/Custompacklist";
 import Totalslist from "../components/Totalslist";
 
 const Checkout = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const packages = Packageslist.filter((newp) => {
     return newp.unit > 0;
   });
